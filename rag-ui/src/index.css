@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+
+.textLayer span {
+  cursor: text;
+  padding: 1px;
+}
+
+/* ---- PDF.js required styles ---- */
+
+.pdf-page {
+  position: relative;
+}
+
+.pdf-canvas {
+  display: block;
+}
+
+.textLayer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.pdf-mark {
+  background: rgba(255, 230, 120, 0.7);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.pdf-flash {
+  animation: pdfFlash 1.2s ease-out;
+}
+
+@keyframes pdfFlash {
+  0% {
+    box-shadow: 0 0 0 rgba(59, 130, 246, 0);
+  }
+  30% {
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
